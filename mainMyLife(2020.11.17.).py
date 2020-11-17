@@ -52,6 +52,14 @@ class MainGame:
                     pygame.quit()
                     sys.exit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
+                    # for button in self.button_list:
+                        #if button.collidepoint(pygame.mouse.get_pos()):
+                            #MainGame.window.fill(COLOR_BLACK)
+                            #button.activate(MainGame)
+
+                            #class button
+                            #self.activate = 把函数封装起来然后放到这里
+                            
                     if self.button_list[0].collidepoint(pygame.mouse.get_pos()):
                         MainGame.window.fill(COLOR_BLACK)
                         MainGame.playBackgroundMusic2()
@@ -71,7 +79,7 @@ class MainGame:
                                     if self.button_list_setting[3].collidepoint(pygame.mouse.get_pos()):
                                         flag = False
                             self.displaySettingInterface()
-                            pygame.display.update()
+                            pygame.display.update() 
 
                     if self.button_list[2].collidepoint(pygame.mouse.get_pos()):
                         MainGame.exitGame()
